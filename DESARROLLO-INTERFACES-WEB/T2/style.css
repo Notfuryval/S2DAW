@@ -1,0 +1,521 @@
+/* estilos.css */
+/* Practica Festival Marea */
+
+/* contenedor */
+.contenedor {
+  max-width: var(--ancho-contenedor);
+  margin: 0 auto;
+  padding-left: var(--espacio-4);
+  padding-right: var(--espacio-4);
+}
+
+/* botones */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--espacio-2) var(--espacio-4);
+  border-radius: var(--radio-pildora);
+  font-weight: var(--peso-fuerte);
+  font-size: var(--texto-s);
+  transition: background-color var(--transicion), color var(--transicion);
+}
+
+.boton--sol {
+  background-color: var(--color-sol);
+  color: var(--color-tinta);
+}
+
+.boton--sol:hover {
+  background-color: var(--color-ola);
+  color: var(--color-superficie);
+}
+
+.boton--borde {
+  background-color: transparent;
+  border: 2px solid var(--color-superficie);
+  color: var(--color-superficie);
+}
+
+.boton--borde:hover {
+  background-color: var(--color-superficie);
+  border-color: var(--color-superficie);
+  color: var(--color-tinta);
+}
+
+.boton--oscuro {
+  background-color: var(--color-tinta);
+  color: var(--color-superficie);
+}
+
+.boton--oscuro:hover {
+  background-color: var(--color-ola);
+}
+
+.boton--ola {
+  background-color: var(--color-ola);
+  color: var(--color-superficie);
+}
+
+.boton--ola:hover {
+  background-color: var(--color-tinta);
+}
+
+/* cabecera */
+.cabecera {
+  background-color: var(--color-superficie);
+  border-bottom: 1px solid var(--color-borde);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.cabecera__interior {
+  display: flex;
+  align-items: center;
+  min-height: var(--alto-cabecera);
+  gap: var(--espacio-4);
+}
+
+.logo {
+  font-family: var(--fuente-titulo);
+  font-size: var(--texto-xl);
+  font-weight: var(--peso-negro);
+}
+
+/* menu */
+.menu {
+  display: flex;
+  flex: 0 1 auto;
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.menu__lista {
+  display: flex;
+  gap: var(--espacio-6);
+}
+
+.menu__enlace {
+  font-size: var(--texto-s);
+  font-weight: var(--peso-fuerte);
+  color: var(--color-tinta-suave);
+}
+
+.menu__enlace:hover {
+  color: var(--color-ola);
+}
+
+/* hero */
+.hero {
+  background-color: var(--color-tinta);
+  color: var(--color-superficie);
+  padding-top: var(--espacio-8);
+  padding-bottom: var(--espacio-8);
+}
+
+.hero__interior {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--espacio-4);
+}
+
+.hero__titulo {
+  font-size: var(--texto-3xl);
+  font-weight: var(--peso-negro);
+  color: var(--color-sol);
+}
+
+.hero__texto {
+  max-width: 45ch;
+  font-size: var(--texto-l);
+}
+
+.hero__acciones {
+  display: flex;
+  gap: var(--espacio-3);
+}
+
+/* datos */
+.datos {
+  padding-top: var(--espacio-6);
+  padding-bottom: var(--espacio-6);
+}
+
+.datos__lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espacio-4);
+}
+
+.dato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--espacio-1);
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-m);
+  padding: var(--espacio-4);
+  box-shadow: var(--sombra-suave);
+}
+
+.dato__valor {
+  font-family: var(--fuente-titulo);
+  font-size: var(--texto-xl);
+  font-weight: var(--peso-negro);
+}
+
+.dato__etiqueta {
+  font-size: var(--texto-s);
+  color: var(--color-tinta-suave);
+}
+
+/* titulo secciones */
+.seccion__titulo {
+  font-size: var(--texto-2xl);
+  font-weight: var(--peso-negro);
+  margin-bottom: var(--espacio-5);
+}
+
+/* cartel */
+.cartel {
+  padding-top: var(--espacio-7);
+  padding-bottom: var(--espacio-7);
+}
+
+.cartel__rejilla {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espacio-5);
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-m);
+  overflow: hidden;
+  box-shadow: var(--sombra-suave);
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-fuerte);
+}
+
+.tarjeta__imagen {
+  height: 160px;
+  background-color: var(--color-ola);
+}
+
+/* colores distintos para que no queden todas iguales */
+.tarjeta:nth-child(2) .tarjeta__imagen {
+  background-color: var(--color-sol);
+}
+
+.tarjeta:nth-child(3) .tarjeta__imagen {
+  background-color: var(--color-coral);
+}
+
+.tarjeta:nth-child(4) .tarjeta__imagen {
+  background-color: var(--color-sol);
+}
+
+.tarjeta:nth-child(5) .tarjeta__imagen {
+  background-color: var(--color-coral);
+}
+
+.tarjeta:nth-child(6) .tarjeta__imagen {
+  background-color: var(--color-ola);
+}
+
+.tarjeta__cuerpo {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: var(--espacio-2);
+  padding: var(--espacio-4);
+}
+
+.tarjeta__titulo {
+  font-size: var(--texto-l);
+  font-weight: var(--peso-negro);
+}
+
+.tarjeta__estilo {
+  font-size: var(--texto-xs);
+  font-weight: var(--peso-fuerte);
+  color: var(--color-ola);
+}
+
+.tarjeta__texto {
+  flex-grow: 1;
+  font-size: var(--texto-s);
+  color: var(--color-tinta-suave);
+}
+
+/* para que el boton quede abajo */
+.tarjeta__boton {
+  margin-top: auto;
+}
+
+/* escenarios */
+.escenarios {
+  padding-top: var(--espacio-7);
+  padding-bottom: var(--espacio-7);
+}
+
+.bloque {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espacio-5);
+  align-items: center;
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-m);
+  padding: var(--espacio-5);
+  margin-bottom: var(--espacio-5);
+  box-shadow: var(--sombra-suave);
+}
+
+/* invierte el segundo bloque */
+.bloque--inverso .bloque__texto {
+  order: 2;
+}
+
+.bloque--inverso .bloque__visual {
+  order: 1;
+}
+
+.bloque__texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--espacio-3);
+}
+
+.bloque__titulo {
+  font-size: var(--texto-xl);
+  font-weight: var(--peso-negro);
+}
+
+.bloque__texto p {
+  color: var(--color-tinta-suave);
+}
+
+.bloque__visual {
+  min-height: 260px;
+  border-radius: var(--radio-m);
+}
+
+.bloque__visual--playa {
+  background-color: var(--color-sol);
+}
+
+.bloque__visual--pinar {
+  background-color: var(--color-ola);
+}
+
+/* entradas */
+.entradas {
+  padding-top: var(--espacio-7);
+  padding-bottom: var(--espacio-7);
+}
+
+.planes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espacio-5);
+  align-items: stretch;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-m);
+  padding: var(--espacio-5);
+  box-shadow: var(--sombra-suave);
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.plan:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-fuerte);
+}
+
+.plan--destacado {
+  border: 2px solid var(--color-coral);
+  box-shadow: var(--sombra-fuerte);
+}
+
+.plan__etiqueta {
+  align-self: flex-start;
+  background-color: var(--color-coral);
+  color: var(--color-superficie);
+  font-size: var(--texto-xs);
+  font-weight: var(--peso-fuerte);
+  padding: var(--espacio-1) var(--espacio-2);
+  border-radius: var(--radio-pildora);
+  margin-bottom: var(--espacio-3);
+}
+
+.plan__nombre {
+  font-size: var(--texto-l);
+  font-weight: var(--peso-negro);
+}
+
+.plan__precio {
+  font-family: var(--fuente-titulo);
+  font-size: var(--texto-2xl);
+  font-weight: var(--peso-negro);
+  color: var(--color-ola);
+  margin-top: var(--espacio-2);
+  margin-bottom: var(--espacio-3);
+}
+
+.plan__lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-2);
+  flex-grow: 1;
+  margin-bottom: var(--espacio-4);
+  font-size: var(--texto-s);
+  color: var(--color-tinta-suave);
+}
+
+/* boton abajo */
+.plan__boton {
+  margin-top: auto;
+}
+
+/* pie */
+.pie {
+  background-color: var(--color-tinta);
+  color: var(--color-superficie);
+  padding-top: var(--espacio-6);
+}
+
+.pie__interior {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--espacio-5);
+  padding-bottom: var(--espacio-6);
+}
+
+.pie__columna {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-3);
+}
+
+.pie__columna--marca .logo {
+  color: var(--color-sol);
+}
+
+.pie__titulo {
+  font-size: var(--texto-m);
+  font-weight: var(--peso-fuerte);
+  color: var(--color-sol);
+}
+
+.pie__lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-2);
+  font-size: var(--texto-s);
+}
+
+.pie__lista a:hover {
+  color: var(--color-sol);
+}
+
+/* parte legal */
+.pie__legal {
+  border-top: 1px solid var(--color-borde);
+  padding-top: var(--espacio-3);
+  padding-bottom: var(--espacio-3);
+}
+
+.pie__legal-interior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--espacio-3);
+  font-size: var(--texto-xs);
+}
+
+.pie__legal a:hover {
+  color: var(--color-sol);
+}
+
+/* sticky footer */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+/* Alineación y navegación por teclado. */
+.cabecera__interior > .boton { justify-self: end; }
+.menu__lista { align-items: center; }
+.hero__acciones { justify-content: center; }
+.bloque:last-child { margin-bottom: 0; }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--color-tinta);
+  outline-offset: 2px;
+}
+.hero a:focus-visible, .pie a:focus-visible,
+.plan--destacado a:focus-visible {
+  outline-color: var(--color-sol);
+}
+
+/* Ajustes de fondos y botones según la referencia, sin anotaciones. */
+.datos {
+  background-color: var(--color-superficie);
+}
+.tarjeta__boton,
+.plan__boton {
+  align-self: stretch;
+  width: 100%;
+}
+.bloque {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+}
+.bloque__visual--playa {
+  background-color: var(--color-ola);
+}
+.bloque__visual--pinar {
+  background-color: var(--color-sol);
+}
+.plan--destacado {
+  background-color: var(--color-tinta);
+  color: var(--color-superficie);
+  border-color: var(--color-tinta);
+}
+.plan--destacado .plan__lista {
+  color: var(--color-superficie);
+}
+.plan--destacado .plan__precio {
+  color: var(--color-sol);
+}
+.plan--destacado .plan__etiqueta {
+  background-color: var(--color-sol);
+  color: var(--color-tinta);
+}
+.plan:not(.plan--destacado) .plan__precio {
+  color: var(--color-tinta);
+}

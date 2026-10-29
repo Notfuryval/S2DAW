@@ -1,0 +1,3 @@
+En el punto de bienvenida.jsp. En la linea de la variable. Si le dejo la variable, me salta el error.
+
+Si no meteo la variable y solo la dejo como texto, abre, pero si la dejo como variable, peta. Pero a mis compañeros les funciona no se por que.

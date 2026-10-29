@@ -1,0 +1,395 @@
+/* =========================
+   FUENTES
+   ========================= */
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  src: url("./assets/fonts/DMSans.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: italic;
+  src: url("./assets/fonts/DMSans-Italic.woff2") format("woff2");
+}
+
+/* =========================
+   VARIABLES
+   ========================= */
+
+:root {
+  --background-grey: #f5f5f5;
+  --primary-black: #0d0d0d;
+  --primary-purple: #7651dc;
+  --primary-white: #ffffff;
+  --primary-yellow: #ffcc68;
+
+  --light-yellow: hsl(31, 66%, 93%);
+  --light-purple: hsl(254, 88%, 90%);
+
+  --font-family-body: "DM Sans", sans-serif;
+}
+
+/* =========================
+   ESTILOS GENERALES
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 60px 24px;
+
+  background-color: var(--background-grey);
+  color: var(--primary-black);
+
+  font-family: var(--font-family-body);
+  font-size: 18px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -1.5px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+p {
+  line-height: 1.15;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================
+   CUADRÍCULA PRINCIPAL
+   4 columnas x 10 filas
+   ========================= */
+
+.bento {
+  width: 100%;
+  max-width: 1010px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(10, 53px);
+  gap: 30px;
+
+  grid-template-areas:
+    "crear    principal   principal   programar"
+    "crear    principal   principal   programar"
+    "crear    principal   principal   programar"
+    "crear    principal   principal   programar"
+    "crear    cuentas     calendario  programar"
+    "escribir cuentas     calendario  programar"
+    "escribir cuentas     calendario  programar"
+    "escribir crecimiento seguidores  seguidores"
+    "escribir crecimiento seguidores  seguidores"
+    "escribir crecimiento seguidores  seguidores";
+}
+
+.tarjeta {
+  min-width: 0;
+  padding: 22px;
+
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* =========================
+   TARJETA PRINCIPAL
+   ========================= */
+
+.principal {
+  grid-area: principal;
+
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 18px;
+
+  padding: 24px;
+
+  background-color: var(--primary-purple);
+  color: var(--primary-white);
+
+  text-align: center;
+}
+
+.principal h1 {
+  font-size: 50px;
+  line-height: 1;
+}
+
+.principal span {
+  color: var(--primary-yellow);
+}
+
+.principal img {
+  width: 190px;
+}
+
+.principal p {
+  font-size: 17px;
+  opacity: 0.85;
+}
+
+/* =========================
+   CUENTAS Y PLATAFORMAS
+   ========================= */
+
+.cuentas {
+  grid-area: cuentas;
+  background-color: var(--primary-white);
+}
+
+.cuentas img {
+  width: 310px;
+  max-width: none;
+  margin-bottom: 14px;
+}
+
+.cuentas h2 {
+  font-size: 26px;
+  letter-spacing: -1px;
+}
+
+/* =========================
+   CALENDARIO
+   ========================= */
+
+.calendario {
+  grid-area: calendario;
+  background-color: var(--primary-yellow);
+}
+
+.calendario h2 {
+  margin-bottom: 12px;
+  font-size: 27px;
+  letter-spacing: -1px;
+}
+
+.calendario img {
+  width: 100%;
+}
+
+/* =========================
+   PROGRAMAR PUBLICACIONES
+   ========================= */
+
+.programar {
+  grid-area: programar;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  gap: 20px;
+
+  padding-top: 28px;
+
+  background-color: var(--light-purple);
+}
+
+.programar h2 {
+  font-size: 30px;
+}
+
+.programar img {
+  width: 330px;
+  max-width: none;
+}
+
+.programar p {
+  font-size: 17px;
+}
+
+/* =========================
+   SEGUIDORES
+   ========================= */
+
+.seguidores {
+  grid-area: seguidores;
+
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  align-items: center;
+  gap: 20px;
+
+  background-color: var(--primary-purple);
+  color: var(--primary-white);
+}
+
+.seguidores h2 {
+  font-size: 34px;
+}
+
+/* =========================
+   CRECIMIENTO
+   ========================= */
+
+.crecimiento {
+  grid-area: crecimiento;
+  background-color: var(--primary-white);
+}
+
+.crecimiento h2 {
+  margin-bottom: 8px;
+  font-size: 56px;
+}
+
+.crecimiento p {
+  margin-bottom: 18px;
+  font-size: 17px;
+}
+
+.crecimiento img {
+  width: 175px;
+}
+
+/* =========================
+   CREAR CONTENIDO
+   ========================= */
+
+.crear {
+  grid-area: crear;
+
+  display: grid;
+  align-content: center;
+  gap: 24px;
+
+  background-color: var(--light-yellow);
+}
+
+.crear h2 {
+  font-size: 36px;
+}
+
+.crear em {
+  color: var(--primary-purple);
+}
+
+.crear img {
+  width: 190px;
+}
+
+/* =========================
+   ESCRIBIR CON IA
+   ========================= */
+
+.escribir {
+  grid-area: escribir;
+
+  display: grid;
+  align-content: space-between;
+  gap: 20px;
+
+  background-color: var(--primary-yellow);
+}
+
+.escribir h2 {
+  font-size: 36px;
+}
+
+.escribir img {
+  width: 100%;
+}
+
+/* =========================
+   MÓVIL Y PANTALLAS ESTRECHAS
+   ========================= */
+
+@media (max-width: 1000px) {
+  body {
+    padding: 32px 16px;
+  }
+
+  .bento {
+    max-width: 540px;
+
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-auto-rows: auto;
+
+    grid-template-areas:
+      "principal"
+      "cuentas"
+      "calendario"
+      "programar"
+      "seguidores"
+      "crecimiento"
+      "crear"
+      "escribir";
+  }
+
+  .principal {
+    padding: 40px 24px;
+  }
+
+  .principal h1 {
+    font-size: 44px;
+  }
+
+  .cuentas img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .calendario {
+    height: 240px;
+  }
+
+  .calendario h2 {
+    max-width: 300px;
+  }
+
+  .calendario img {
+    width: 220px;
+  }
+
+  .programar {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .programar img {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .seguidores {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 32px;
+
+    text-align: center;
+  }
+
+  .seguidores img {
+    width: 230px;
+  }
+
+  .seguidores h2 {
+    max-width: 300px;
+  }
+
+  .escribir img {
+    width: 220px;
+  }
+}
