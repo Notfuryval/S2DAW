@@ -1,0 +1,11 @@
+.todo-template {
+  max-width: 560px;
+  margin: 40px auto;
+  padding: 0 var(--space);
+  display: grid;
+  gap: var(--space);
+}
+.todo-template__header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}

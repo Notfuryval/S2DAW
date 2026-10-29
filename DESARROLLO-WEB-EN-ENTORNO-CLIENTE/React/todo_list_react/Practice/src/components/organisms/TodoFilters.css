@@ -1,0 +1,5 @@
+/* src/components/organisms/TodoFilters.css */
+.todo-filters {
+  display: flex;
+  gap: 8px;
+}

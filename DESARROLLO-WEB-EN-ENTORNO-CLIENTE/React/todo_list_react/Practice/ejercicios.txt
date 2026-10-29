@@ -1,0 +1,37 @@
+Ejercicio 1: Badge
+Revisar src/components/atoms/Badge.jsx y Badge.css.
+El Badge es un átomo que recibe el texto por la prop label y lo muestra.
+Se usa en src/components/pages/TodosPage.jsx, donde se calcula pending
+con todos.filter((t) => !t.done).length y se muestra “x tasks remaining”.
+
+Ejercicio 2: Delete completed
+Revisar src/components/pages/TodosPage.jsx.
+He reutilizado el átomo Button con variant="secondary".
+La función deleteCompleted filtra las tareas y elimina las completadas:
+setTodos(todos.filter((todo) => !todo.done)).
+
+Ejercicio 3: TodoFilters
+Revisar src/components/organisms/TodoFilters.jsx y TodoFilters.css.
+Es un organismo con tres botones: All, Pending y Done.
+El estado del filtro está en TodosPage porque tanto los filtros como la
+lista de tareas lo necesitan. Es lifting state up.
+
+Ejercicio 4: Lista filtrada
+Revisar src/components/pages/TodosPage.jsx.
+La variable filteredTodos se calcula a partir de todos y filter.
+No se guarda en otro useState porque es dato derivado, no estado.
+
+Ejercicio 5: Editar tarea
+Revisar src/components/molecules/TodoItem.jsx.
+El estado de edición es local en TodoItem: isEditing y draft.
+Al guardar, llama a onEdit(todo.id, texto).
+La función editTodo está en TodosPage y actualiza el estado global todos.
+También revisar TodoList.jsx, que reenvía onEdit a cada TodoItem.
+
+Ejercicio 6: Custom hook useTodos
+Revisar src/hooks/useTodos.js.
+Ahí está el estado todos y las funciones addTodo, toggleTodo, deleteTodo,
+editTodo y deleteCompleted.
+En src/components/pages/TodosPage.jsx ya no está esa lógica: solo se llama
+al hook y se pasan los datos y funciones a los componentes mediante props.
+El hook es .js porque no devuelve JSX; es lógica reutilizable.
