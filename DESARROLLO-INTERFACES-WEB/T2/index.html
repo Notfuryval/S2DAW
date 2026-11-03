@@ -11,12 +11,14 @@
 </head>
 <body>
 
-  <!-- ============ 1. CABECERA ============ -->
+ <!-- ============ 1. CABECERA ============ -->
   <header class="cabecera">
     <div class="contenedor cabecera__interior">
       <a href="#" class="logo">Marea</a>
 
-      <nav class="menu" aria-label="Principal">
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="menu-principal" aria-expanded="false">☰</button>
+
+      <nav class="menu" id="menu-principal" aria-label="Principal">
         <ul class="menu__lista">
           <li><a href="#cartel" class="menu__enlace">Cartel</a></li>
           <li><a href="#escenarios" class="menu__enlace">Escenarios</a></li>
@@ -270,6 +272,6 @@
       </div>
     </div>
   </footer>
-
+  <script src="app.js" nodefer></script>
 </body>
 </html>

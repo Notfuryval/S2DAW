@@ -4,6 +4,7 @@
 /* contenedor */
 .contenedor {
   max-width: var(--ancho-contenedor);
+  width: 90%;
   margin: 0 auto;
   padding-left: var(--espacio-4);
   padding-right: var(--espacio-4);
@@ -518,4 +519,104 @@ a:focus-visible, button:focus-visible {
 }
 .plan:not(.plan--destacado) .plan__precio {
   color: var(--color-tinta);
+}
+
+/* Escritorio: desde 960px */
+@media (min-width: 960px) {
+  .tarjeta:hover,
+  .plan:hover { transform: translateY(-4px); }
+}
+
+/* Tablet y móvil: hasta 959px */
+@media (max-width: 959px) {
+  .pie__interior { grid-template-columns: 1fr 1fr; }
+  .planes,
+  .cartel__rejilla { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Móvil: hasta 639px */
+@media (max-width: 639px) {
+  .cabecera__interior { flex-wrap: wrap; padding-block: var(--espacio-2); }
+  .menu { width: 100%; margin-left: 0; justify-content: center; }
+  .menu__lista { gap: var(--espacio-3); flex-wrap: wrap; justify-content: center; }
+
+  .hero { padding-block: var(--espacio-6); }
+  .hero__acciones { flex-direction: column; width: 100%; }
+  .hero__acciones .boton { width: 100%; }
+
+  .datos__lista,
+  .cartel__rejilla,
+  .planes,
+  .bloque,
+  .pie__interior { grid-template-columns: 1fr; }
+
+  /* en móvil el texto siempre va antes que la imagen */
+  .bloque--inverso .bloque__texto,
+  .bloque--inverso .bloque__visual { order: 0; }
+
+  .seccion__titulo { font-size: var(--texto-xl); }
+  .pie__legal-interior { flex-direction: column; text-align: center; }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fondo: #0b1220;
+    --color-borde: #2b3a5c;
+    --color-tinta-suave: #aab6d3;
+    --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.5);
+    --sombra-fuerte: 0 12px 32px rgba(0, 0, 0, 0.6);
+  }
+
+  body { color: #e8edf7; }
+
+  .cabecera,
+  .datos,
+  .dato,
+  .tarjeta,
+  .plan { background-color: #16213a; }
+
+  .plan--destacado { background-color: var(--color-tinta); }
+
+  .plan:not(.plan--destacado) .plan__precio { color: #e8edf7; }
+
+  a:focus-visible,
+  button:focus-visible { outline-color: #e8edf7; }
+
+  .boton--oscuro { background-color: #26365c; }
+}
+
+/* Botón hamburguesa: oculto en escritorio y tablet */
+.menu-toggle {
+  display: none;
+  background: none;
+  color: inherit;
+  font-size: var(--texto-xl);
+}
+
+/* Menú hamburguesa en móvil */
+@media (max-width: 639px) {
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .menu {
+    display: none;
+    order: 1;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu__lista {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: var(--espacio-3);
+    padding-top: var(--espacio-3);
+    padding-bottom: var(--espacio-3);
+  }
 }
