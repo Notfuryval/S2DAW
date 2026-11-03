@@ -1,0 +1,20 @@
+.question-card {
+  min-width: var(--space-0);
+  margin: var(--space-0);
+  padding: var(--space-5);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-large);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.question-card__answers {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.question-card__feedback {
+  margin-top: var(--space-4);
+  font-size: var(--font-small);
+}

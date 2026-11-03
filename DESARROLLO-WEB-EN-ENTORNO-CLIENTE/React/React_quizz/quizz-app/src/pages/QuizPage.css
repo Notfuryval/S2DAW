@@ -1,0 +1,17 @@
+.quiz-page {
+  display: grid;
+  gap: var(--space-5);
+  width: 100%;
+  max-width: var(--page-width);
+  margin: var(--space-6) auto;
+  padding: var(--space-4);
+}
+
+.quiz-page__title {
+  font-size: var(--font-title);
+}
+
+.quiz-page__actions {
+  display: flex;
+  justify-content: center;
+}

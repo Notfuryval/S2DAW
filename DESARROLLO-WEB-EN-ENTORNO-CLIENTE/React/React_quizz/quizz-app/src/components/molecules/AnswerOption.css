@@ -1,0 +1,50 @@
+.answer-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-small);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.answer-option:hover:not(.answer-option--disabled) {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+}
+
+.answer-option:focus-within {
+  outline: var(--focus-width) solid var(--primary);
+  outline-offset: var(--space-1);
+}
+
+.answer-option--selected {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+}
+
+.answer-option--correct {
+  background: var(--success-soft);
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.answer-option--wrong {
+  background: var(--danger-soft);
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.answer-option--disabled {
+  cursor: default;
+}
+
+.answer-option__input {
+  margin: var(--space-0);
+  flex-shrink: 0;
+}
+
+.answer-option__text {
+  overflow-wrap: anywhere;
+}

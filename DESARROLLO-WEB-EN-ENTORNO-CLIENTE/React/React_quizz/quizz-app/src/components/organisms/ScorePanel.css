@@ -1,0 +1,24 @@
+.score-panel {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-5);
+  padding: var(--space-6);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-large);
+  background: var(--surface);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.score-panel__title {
+  font-size: var(--font-large);
+}
+
+.score-panel__score {
+  font-size: var(--font-score);
+  font-weight: 700;
+}
+
+.score-panel__message {
+  color: var(--muted);
+}

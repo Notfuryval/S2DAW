@@ -1,0 +1,92 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.5;
+
+  --background: #f3f4f6;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #d1d5db;
+
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-soft: #eff6ff;
+  --on-primary: #ffffff;
+
+  --success: #15803d;
+  --success-soft: #dcfce7;
+  --danger: #b91c1c;
+  --danger-soft: #fee2e2;
+
+  --font-small: 0.85rem;
+  --font-normal: 1rem;
+  --font-large: 1.25rem;
+  --font-title: 1.75rem;
+  --font-score: 2rem;
+
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+
+  --radius-small: 0.5rem;
+  --radius-large: 0.75rem;
+  --radius-pill: 999px;
+
+  --border-width: 1px;
+  --focus-width: 2px;
+  --progress-height: 0.5rem;
+  --page-width: 38rem;
+  --disabled-opacity: 0.5;
+
+  --shadow: 0 4px 18px #0000000d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+input[type='radio'] {
+  accent-color: var(--primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111827;
+    --surface: #1f2937;
+    --text: #f3f4f6;
+    --muted: #9ca3af;
+    --border: #4b5563;
+
+    --primary: #60a5fa;
+    --primary-hover: #93c5fd;
+    --primary-soft: #172e50;
+    --on-primary: #111827;
+
+    --success: #86efac;
+    --success-soft: #143525;
+    --danger: #fca5a5;
+    --danger-soft: #451c24;
+  }
+}

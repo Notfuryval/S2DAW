@@ -1,0 +1,23 @@
+.button {
+  padding: var(--space-3) var(--space-5);
+  border: none;
+  border-radius: var(--radius-small);
+  background: var(--primary);
+  color: var(--on-primary);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.button:disabled {
+  opacity: var(--disabled-opacity);
+  cursor: not-allowed;
+}
+
+.button:focus-visible {
+  outline: var(--focus-width) solid var(--text);
+  outline-offset: var(--space-1);
+}
