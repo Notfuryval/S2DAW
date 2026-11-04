@@ -26,13 +26,13 @@
     <div class="profile-art"><img src="${pageContext.request.contextPath}/assets/img/profile-avatar.svg" alt="Avatar ilustrado del perfil"></div>
     <div>
       <!-- TODO 1-5: completa las expresiones EL con rol, nombre, edad, correo y grupo. -->
-      <span class="badge">${TODO_1}</span>
-      <h2>${TODO_2}</h2>
+      <span class="badge">${rol}</span>
+      <h2>${nombre}</h2>
       <p class="muted">Esta ficha no inventa datos: representa los atributos que ha recibido.</p>
       <dl class="definition-list">
-        <dt>Edad</dt><dd>${TODO_3} años</dd>
-        <dt>Correo</dt><dd>${TODO_4}</dd>
-        <dt>Grupo</dt><dd>${TODO_5}</dd>
+        <dt>Edad</dt><dd>${edad} años</dd>
+        <dt>Correo</dt><dd>${correo}</dd>
+        <dt>Grupo</dt><dd>${grupo}</dd>
       </dl>
     </div>
   </section>

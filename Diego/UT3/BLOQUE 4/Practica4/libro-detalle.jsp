@@ -16,7 +16,7 @@
     </a>
     <div class="nav-links">
       <a class="btn btn-secondary" href="${pageContext.request.contextPath}/libros">Colección</a>
-      <a class="btn btn-primary" href="${pageContext.request.contextPath}/libros/nuevo">+ Nuevo libro</a>
+      <a class="btn btn-primary" href="${pageContext.request.contextPath}/libros?accion=nuevo">+ Nuevo libro</a>
     </div>
   </nav>
 </header>
@@ -26,17 +26,17 @@
     <img class="detail-cover" src="${pageContext.request.contextPath}/assets/img/book-placeholder.svg" alt="Portada ficticia del libro">
     <div>
       <!-- TODO 1-7: completa las propiedades del objeto libro y el id del enlace Editar. -->
-      <span class="badge">${TODO_1}</span>
-      <h1>${TODO_2}</h1>
-      <p class="muted">de <strong>${TODO_3}</strong></p>
+      <span class="badge">${libro.categoria.nombre}</span>
+      <h1>${libro.titulo}</h1>
+      <p class="muted">de <strong>${libro.autor.nombre}</strong></p>
       <dl class="definition-list">
-        <dt>ISBN</dt><dd>${TODO_4}</dd>
-        <dt>Año</dt><dd>${TODO_5}</dd>
-        <dt>Precio</dt><dd class="price">${TODO_6} €</dd>
+        <dt>ISBN</dt><dd>${libro.isbn}</dd>
+        <dt>Año</dt><dd>${libro.anioPublicacion}</dd>
+        <dt>Precio</dt><dd class="price">${libro.precio} €</dd>
       </dl>
       <div class="actions" style="margin-top:1.5rem">
         <a class="btn btn-secondary" href="${pageContext.request.contextPath}/libros">← Volver</a>
-        <a class="btn btn-primary" href="${pageContext.request.contextPath}/libros/editar?id=${TODO_7}">Editar</a>
+        <a class="btn btn-primary" href="${pageContext.request.contextPath}/libros?accion=editar&id=${libro.idLibro}">Editar</a>
       </div>
     </div>
   </section>

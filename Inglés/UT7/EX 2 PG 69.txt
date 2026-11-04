@@ -1,0 +1,42 @@
+EX 2 PG 69
+
+a) They are composed of elements of the other two different types. They live in an app store and run
+on the device but they are written with web technologies.
+
+- Hybrid Apps
+
+b) They are not real applications. They are in fact websites but look and feel like applications. Internet
+access is required because they are run by a browser.
+
+- Mobile Web apps
+
+c) They are housed on the device and they are accessed through icons on the device home screen.
+They are used without internet connection and they are installed through an app store (for example,
+Google Play or Apple's App Store).
+
+- Native apps
+
+EX 3 PG 69
+
+Native: Camera, compass, Shazam, angry birds, Google Maps, Gmail
+
+Mobile Web: Financial Times, Google maps, Google Books
+
+Hybrid: Yelp, Twitter, Gmail, Flipboard, Airbnb
+
+EX 4 PG 70
+
+Multimedia is the combination of text, images, sound, video and animation to present information.
+
+EX 5 PG 70
+
+a) Animation
+b) Video/audio clip
+c) Presentation
+d) Tutorial
+e) Media
+f) Videogame
+g) Digitise
+h) Interactivity
+i) Simulation
+j) Fair use
