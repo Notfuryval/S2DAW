@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operaciones con numbers</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let something;
+      console.log(something);
+      console.log(typeof something);
+
+      something = 1;
+
+      console.log(something);
+      console.log(typeof something);
+
+      something = "Hello";
+
+      console.log(something);
+      console.log(typeof something);
+
+      //operaciones aritméticas
+
+      let sum = 4 + 5; // 9
+      let difference = 10 - 3; // 7
+      let product = 4 * 3; // 12
+      let quotient = 12 / 4; // 3
+
+      let power = 2 ** 3; // 8
+
+      let counter = 0;
+      counter++; // counter is now 1
+
+      counter--; // counter is now 0
+
+      //operaciones lógicas de comparación
+
+      let a = 5;
+      console.log(5 == 5); // true
+      console.log(5 == "5"); //true
+      console.log(5 === "5"); //false
+      console.log(5 === 5); //true
+      console.log(5 === a); //true
+
+      // integer division
+
+      let num1 = 10;
+      let num2 = 3;
+
+      let int_division = Math.floor(num1 / num2);
+      let reminder = num1 % num2;
+
+      console.log(int_division);
+      console.log(reminder);
+    </script>
+  </body>
+</html>

@@ -558,33 +558,6 @@ a:focus-visible, button:focus-visible {
   .pie__legal-interior { flex-direction: column; text-align: center; }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-fondo: #0b1220;
-    --color-borde: #2b3a5c;
-    --color-tinta-suave: #aab6d3;
-    --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.5);
-    --sombra-fuerte: 0 12px 32px rgba(0, 0, 0, 0.6);
-  }
-
-  body { color: #e8edf7; }
-
-  .cabecera,
-  .datos,
-  .dato,
-  .tarjeta,
-  .plan { background-color: #16213a; }
-
-  .plan--destacado { background-color: var(--color-tinta); }
-
-  .plan:not(.plan--destacado) .plan__precio { color: #e8edf7; }
-
-  a:focus-visible,
-  button:focus-visible { outline-color: #e8edf7; }
-
-  .boton--oscuro { background-color: #26365c; }
-}
-
 /* Botón hamburguesa: oculto en escritorio y tablet */
 .menu-toggle {
   display: none;
@@ -619,4 +592,31 @@ a:focus-visible, button:focus-visible {
     padding-top: var(--espacio-3);
     padding-bottom: var(--espacio-3);
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fondo: #0b1220;
+    --color-borde: #2b3a5c;
+    --color-tinta-suave: #aab6d3;
+    --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.5);
+    --sombra-fuerte: 0 12px 32px rgba(0, 0, 0, 0.6);
+  }
+
+  body { color: #e8edf7; }
+
+  .cabecera,
+  .datos,
+  .dato,
+  .tarjeta,
+  .plan { background-color: #16213a; }
+
+  .plan--destacado { background-color: var(--color-tinta); }
+
+  .plan:not(.plan--destacado) .plan__precio { color: #e8edf7; }
+
+  a:focus-visible,
+  button:focus-visible { outline-color: #e8edf7; }
+
+  .boton--oscuro { background-color: #26365c; }
 }
