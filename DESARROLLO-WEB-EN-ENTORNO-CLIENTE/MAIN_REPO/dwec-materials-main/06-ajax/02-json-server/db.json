@@ -1,14 +1,6 @@
 {
   "cars": [
     {
-      "id": "1",
-      "make": "Toyota",
-      "model": "Camry",
-      "year": 2021,
-      "color": "Blue",
-      "price": 24000
-    },
-    {
       "id": "2",
       "make": "Honda",
       "model": "Accord",
@@ -39,6 +31,28 @@
       "year": 2021,
       "color": "Gray",
       "price": 43000
+    },
+    {
+      "make": "Fiat",
+      "model": "Tipo",
+      "year": 1990,
+      "color": "White",
+      "price": 3000,
+      "id": "LZiDrN08nhg"
+    },
+    {
+      "id": "TbvyGXZ-r-c",
+      "make": "Opel",
+      "model": "Corsa",
+      "year": 2006,
+      "color": "White",
+      "price": 3400
+    },
+    {
+      "make": "BMW",
+      "model": "X3",
+      "id": "xj962VQFWbM"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
