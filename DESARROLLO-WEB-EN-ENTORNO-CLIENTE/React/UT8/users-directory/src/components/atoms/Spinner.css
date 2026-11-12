@@ -1,0 +1,5 @@
+/* src/components/atoms/Spinner.css */
+.spinner {
+  text-align: center;
+  color: var(--color-muted);
+}

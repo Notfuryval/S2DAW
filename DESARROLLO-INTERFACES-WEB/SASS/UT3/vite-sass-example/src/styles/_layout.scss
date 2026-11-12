@@ -1,0 +1,46 @@
+@use "globals" as *;
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  color: $color-text;
+  margin: 0;
+  padding: 0;
+
+  // 1️⃣ Base (móvil)
+  background-color: $color-bg-default;
+
+  // 2️⃣ Tablet
+  @include respond-to("narrow") {
+    background-color: $color-bg-narrow;
+  }
+
+  // 3️⃣ Escritorio mediano
+  @include respond-to("medium") {
+    background-color: $color-bg-medium;
+  }
+
+  // 4️⃣ Escritorio grande
+  @include respond-to("large") {
+    background-color: $color-bg-large;
+  }
+}
+
+.container {
+  background-color: $color-surface;
+  overflow: hidden;
+  border-radius: $radius-lg;
+  width: 95%;
+  max-width: 1200px;
+  margin: $space-sm auto;
+  padding: $space-sm;
+
+  @include respond-to("medium") {
+    width: 90%;
+    padding: $space-md;
+  }
+
+  @include respond-to("large") {
+    padding: $space-lg;
+  }
+}

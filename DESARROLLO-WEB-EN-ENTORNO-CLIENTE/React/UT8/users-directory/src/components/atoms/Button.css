@@ -1,0 +1,21 @@
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: var(--radius);
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn--primary { background: var(--color-primary); }
+.btn--danger  { background: var(--color-danger); }
+.btn:hover    { opacity: 0.9; }
+.btn:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+.btn--secondary {
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}

@@ -1,0 +1,16 @@
+/* src/components/templates/TwoColumnTemplate.css */
+/* __left needs no rules of its own: it is just the first grid column. */
+.two-col {
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 0 var(--space);
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space);
+}
+.two-col__title { grid-column: 1 / -1; margin: 0; }
+.two-col__right h2 { margin: 0 0 var(--space); font-size: 1.125rem; }
+
+@media (max-width: 720px) {
+  .two-col { grid-template-columns: 1fr; }   /* stack the columns on narrow screens */
+}

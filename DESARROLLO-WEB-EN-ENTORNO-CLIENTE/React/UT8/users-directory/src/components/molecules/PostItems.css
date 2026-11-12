@@ -1,0 +1,10 @@
+/* src/components/molecules/PostItem.css */
+.post-item {
+  list-style: none;
+  padding: var(--space) 16px;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+.post-item__title { margin: 0 0 8px; font-size: 0.9375rem; }
+.post-item__body  { margin: 0; font-size: 0.8125rem; color: var(--color-muted); }

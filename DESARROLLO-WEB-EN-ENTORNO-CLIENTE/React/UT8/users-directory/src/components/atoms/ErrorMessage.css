@@ -1,0 +1,5 @@
+/* src/components/atoms/ErrorMessage.css */
+.error {
+  text-align: center;
+  color: var(--color-danger);
+}
