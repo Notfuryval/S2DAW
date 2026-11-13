@@ -1,20 +1,40 @@
-// src/components/pages/UsersPage.jsx
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import TwoColumnTemplate from '../templates/TwoColumnTemplate'
 import UserList from '../organisms/UserList'
+import PostList from '../organisms/PostList'
+import Spinner from '../atoms/Spinner'
+import ErrorMessage from '../atoms/ErrorMessage'
+import useFetch from '../../hooks/useFetch'
 
 export default function UsersPage() {
-  const [users, setUsers] = useState([])
+  const { data: users, loading, error } = useFetch(
+    'https://jsonplaceholder.typicode.com/users'
+  )
+  const [selectedUser, setSelectedUser] = useState(null)
 
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then((res) => res.json())
-      .then((data) => setUsers(data))
-  }, [])   // empty array: only once, after mount
+  if (loading) return <Spinner />
+  if (error) return <ErrorMessage message={error} />
 
   return (
-    <main>
-      <h1>Users directory</h1>
-      <UserList users={users} />
-    </main>
+    <TwoColumnTemplate
+      title="Users directory"
+      left={
+        <UserList
+          users={users ?? []}
+          selectedId={selectedUser?.id}
+          onSelect={setSelectedUser}
+        />
+      }
+      right={
+        selectedUser ? (
+          <>
+            <h2>Posts by {selectedUser.name}</h2>
+            <PostList userId={selectedUser.id} />
+          </>
+        ) : (
+          <p>Select a user to see their posts.</p>
+        )
+      }
+    />
   )
 }

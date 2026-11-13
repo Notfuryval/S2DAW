@@ -1,0 +1,11 @@
+codigo,dispositivo,marca,modelo,ram,precio,departamento,estado
+PC01,Sobremesa,Lenovo,ThinkCentre M70,16,650,Administración,Disponible
+PC02,Sobremesa,HP,ProDesk 400,32,850,Sistemas,En uso
+PC03,Sobremesa,Dell,OptiPlex 7010,16,720,Administración,Disponible
+PC04,Portátil,Lenovo,ThinkPad E14,16,780,Ventas,En uso
+PC05,Portátil,HP,ProBook 450,32,990,Sistemas,En uso
+PC06,Portátil,Dell,Latitude 5440,16,870,Ventas,En reparación
+PC07,Sobremesa,Lenovo,ThinkCentre M90,32,910,Sistemas,Disponible
+PC08,Portátil,Asus,ExpertBook B1,8,540,Administración,En uso
+PC09,Sobremesa,HP,EliteDesk 800,32,1100,Dirección,En uso
+PC10,Portátil,Lenovo,ThinkPad T14,32,1250,Dirección,Disponible
